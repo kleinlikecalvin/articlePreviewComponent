@@ -57,10 +57,16 @@ footer {
 }
 #authorName {
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 0 20px;
 }
 #articleDate {
   margin: 0;
+  margin: 0 0 0 20px;
+}
+#shareBtn a {
+  background-color: var(--lightGreyishBlue);
+  border-radius: 50%;
+  padding: 7px 9px 7px 9px;
 }
 .attribution {
   font-size: 11px;
