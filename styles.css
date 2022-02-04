@@ -44,6 +44,10 @@ body {
 #articleDate {
   color: var(--desaturatedBlue);
 }
+.authorImg img {
+  width: 45px;
+  border-radius: 50%;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
