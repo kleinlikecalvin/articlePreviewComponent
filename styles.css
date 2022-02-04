@@ -48,6 +48,9 @@ body {
   width: 45px;
   border-radius: 50%;
 }
+#authorName {
+  font-weight: 700;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
