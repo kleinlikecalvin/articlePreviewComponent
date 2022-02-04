@@ -4,6 +4,9 @@
   --greyishBlue: hsl(212, 23%, 69%);
   --lightGreyishBlue: hsl(210, 46%, 95%);
 }
+body {
+  font-family: "Manrope", sans-serif;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
