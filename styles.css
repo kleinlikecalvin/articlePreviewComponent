@@ -44,12 +44,23 @@ body {
 #articleDate {
   color: var(--desaturatedBlue);
 }
+footer {
+  align-items: center;
+  justify-content: space-between;
+}
+.authorInfoCont {
+  align-items: center;
+}
 .authorImg img {
   width: 45px;
   border-radius: 50%;
 }
 #authorName {
   font-weight: 700;
+  margin: 0;
+}
+#articleDate {
+  margin: 0;
 }
 .attribution {
   font-size: 11px;
