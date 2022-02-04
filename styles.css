@@ -7,6 +7,12 @@
 body {
   font-family: "Manrope", sans-serif;
 }
+.row {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
