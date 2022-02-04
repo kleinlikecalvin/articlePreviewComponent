@@ -6,12 +6,27 @@
 }
 body {
   font-family: "Manrope", sans-serif;
+  background-color: var(--lightGreyishBlue);
 }
 .flex {
   display: flex;
 }
 .col {
   flex-direction: column;
+}
+.main {
+  margin: auto;
+  width: 800px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mainImg {
+  width: 40%;
+  background-image: url(images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .attribution {
   font-size: 11px;
