@@ -77,6 +77,9 @@ footer {
   border-radius: 50%;
   padding: 6px 9px 6px 9px;
 }
+#shareBtn a:hover {
+  background-color: var(--darkGreyishBlue);
+}
 .attribution {
   font-size: 11px;
   text-align: center;
