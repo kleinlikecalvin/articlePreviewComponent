@@ -26,7 +26,7 @@ body {
   width: 40%;
   background-image: url(images/drawers.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 0 0;
   background-size: cover;
 }
 .articleCont {
