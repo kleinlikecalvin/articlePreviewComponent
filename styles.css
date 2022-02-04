@@ -31,14 +31,19 @@ body {
 .articleCont {
   width: 60%;
   background-color: white;
-  justify-content: space-around;
 }
 .articleCont h2,
 #authorName {
   color: var(--darkGreyishBlue);
 }
+.articleCont h2 {
+  margin: 0;
+  padding: 30px 45px 0 45px;
+}
 .articleCont p {
+  margin: 0;
   font-size: 13px;
+  padding: 15px 45px 0 45px;
 }
 .articleCont p,
 #articleDate {
@@ -47,26 +52,29 @@ body {
 footer {
   align-items: center;
   justify-content: space-between;
-}
-.authorInfoCont {
-  align-items: center;
+  padding: 20px 45px 0 45px;
 }
 .authorImg img {
   width: 45px;
   border-radius: 50%;
 }
+.authorInfo {
+  justify-content: space-evenly;
+}
 #authorName {
   font-weight: 700;
   margin: 0 0 0 20px;
+  padding: 0;
 }
 #articleDate {
   margin: 0;
   margin: 0 0 0 20px;
+  padding: 0;
 }
 #shareBtn a {
   background-color: var(--lightGreyishBlue);
   border-radius: 50%;
-  padding: 7px 9px 7px 9px;
+  padding: 6px 9px 6px 9px;
 }
 .attribution {
   font-size: 11px;
