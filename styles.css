@@ -1,3 +1,9 @@
+:root {
+  --darkGreyishBlue: hsl(217, 19%, 35%);
+  --desaturatedBlue: hsl(214, 17%, 51%);
+  --greyishBlue: hsl(212, 23%, 69%);
+  --lightGreyishBlue: hsl(210, 46%, 95%);
+}
 .attribution {
   font-size: 11px;
   text-align: center;
