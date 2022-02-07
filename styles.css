@@ -1,6 +1,3 @@
-/* LEFT OFF AT
-Trying to fix button issue. I want the svg path fill to change color on hover. Right now it changes only when hovering directly over the path and not the whole href which makes sense based on how it's currently coded but it's not great. Maybe if I move the shareBtn div inside of the href? I dunno. */
-
 :root {
   --darkGreyishBlue: hsl(217, 19%, 35%);
   --desaturatedBlue: hsl(214, 17%, 51%);
