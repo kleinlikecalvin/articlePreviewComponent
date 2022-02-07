@@ -158,10 +158,18 @@ footer {
     font-size: 14px;
   }
   footer {
-    padding: 20px 45px 20px 45px;
-    border: 1px solid green;
+    padding: 20px 30px 20px 30px;
   }
   .shareMode {
     background-color: var(--darkGreyishBlue);
+  }
+  .shareMode .authorInfoCont {
+    display: none;
+  }
+  .shareMode #tippyShareContent {
+    display: flex;
+  }
+  .shareMode #tippyShareContent h3 {
+    font-size: 14px;
   }
 }
