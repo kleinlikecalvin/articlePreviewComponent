@@ -1,3 +1,6 @@
+/* LEFT OFF AT
+Trying to fix button issue. I want the svg path fill to change color on hover. Right now it changes only when hovering directly over the path and not the whole href which makes sense based on how it's currently coded but it's not great. Maybe if I move the shareBtn div inside of the href? I dunno. */
+
 :root {
   --darkGreyishBlue: hsl(217, 19%, 35%);
   --desaturatedBlue: hsl(214, 17%, 51%);
@@ -72,13 +75,17 @@ footer {
   margin: 0 0 0 20px;
   padding: 0;
 }
-#shareBtn a {
+#shareBtn svg {
   background-color: var(--lightGreyishBlue);
   border-radius: 50%;
-  padding: 6px 9px 6px 9px;
+  fill: var(--desaturatedBlue);
+  padding: 10px;
+  transition: 0.3s;
 }
-#shareBtn a:hover {
-  background-color: var(--darkGreyishBlue);
+#shareBtn svg:hover {
+  background-color: var(--desaturatedBlue);
+  transition: 0.3s;
+  fill: white;
 }
 .attribution {
   font-size: 11px;
