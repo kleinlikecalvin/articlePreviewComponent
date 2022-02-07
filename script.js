@@ -7,6 +7,7 @@ tippy(button, {
   trigger: "click",
   theme: "custom",
   allowHTML: true,
+  interactive: true,
   content: tippyShareContent,
 }); //end tippy()
 

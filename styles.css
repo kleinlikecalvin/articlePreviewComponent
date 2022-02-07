@@ -82,6 +82,9 @@ footer {
   text-transform: uppercase;
   top: -25px;
 }
+.tippy-box[data-theme~="custom"] > .tippy-arrow::before {
+  transform: scale(1.5);
+}
 .tippy-box[data-theme~="custom"][data-placement^="top"] > .tippy-arrow::before {
   border-top-color: var(--darkGreyishBlue);
 }
