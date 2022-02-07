@@ -39,12 +39,12 @@ body {
 }
 .articleCont h2 {
   margin: 0;
-  padding: 30px 45px 0 45px;
+  padding: 30px 45px 15px 45px;
 }
 .articleCont p {
   margin: 0;
   font-size: 13px;
-  padding: 15px 45px 0 45px;
+  padding: 0 45px 20px 45px;
 }
 .articleCont p,
 #articleDate {
@@ -53,7 +53,7 @@ body {
 footer {
   align-items: center;
   justify-content: space-between;
-  padding: 20px 45px 0 45px;
+  padding: 0 45px 0 45px;
 }
 .authorImg img {
   width: 45px;
@@ -157,6 +157,11 @@ footer {
   .articleCont p {
     font-size: 14px;
   }
-  footer .shareMode {
+  footer {
+    padding: 20px 45px 20px 45px;
+    border: 1px solid green;
+  }
+  .shareMode {
+    background-color: var(--darkGreyishBlue);
   }
 }
