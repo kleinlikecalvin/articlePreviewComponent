@@ -129,3 +129,34 @@ footer {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+@media only screen and (max-width: 837px) {
+  .main {
+    /* margin: 150px auto; */
+    width: 375px;
+    height: unset;
+    flex-direction: column;
+    /* border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 10px 40px var(--greyishBlue); */
+  }
+  .mainImg {
+    height: 250px;
+    width: unset;
+    /* background-image: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover; */
+  }
+  .articleCont {
+    width: unset;
+    /* background-color: white; */
+  }
+  .articleCont h2 {
+    font-size: 18px;
+  }
+  .articleCont p {
+    font-size: 14px;
+  }
+  footer .shareMode {
+  }
+}
