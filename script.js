@@ -21,5 +21,3 @@ if (window.innerWidth >= 838) {
     }
   });
 }
-
-//while window width is < 838 px change footer to share mode
