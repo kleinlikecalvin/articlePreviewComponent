@@ -5,6 +5,7 @@ tippyShareContent.style.display = "flex";
 //while window width is >= 838 px use Tippy
 tippy(button, {
   trigger: "click",
+  theme: "custom",
   allowHTML: true,
   content: tippyShareContent,
 }); //end tippy()
