@@ -76,7 +76,7 @@ footer {
   background-color: var(--lightGreyishBlue);
   border-radius: 50%;
   fill: var(--desaturatedBlue);
-  padding: 10px;
+  padding: 11px 10px;
   transition: 0.3s;
 }
 #shareBtn svg:hover {
