@@ -72,6 +72,16 @@ footer {
   margin: 0 0 0 20px;
   padding: 0;
 }
+#tippyShareContent {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+}
+#tippyShareContent h3 {
+  color: white;
+  text-transform: uppercase;
+}
 #shareBtn svg {
   background-color: var(--lightGreyishBlue);
   border-radius: 50%;
