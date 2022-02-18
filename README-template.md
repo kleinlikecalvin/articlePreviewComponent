@@ -1,12 +1,7 @@
-# Frontend Mentor - Article preview component solution
-
-This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -16,9 +11,11 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+
+This is a beginner challenge by FrontEndMentor.io [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
+
+I used HTML, CSS, JS, and Tippy.js to complete it. There are a few tools I can now equip which I learned from completing this challenge. I detailed them below!
 
 ### The challenge
 
@@ -27,85 +24,96 @@ Users should be able to:
 - View the optimal layout for the component depending on their device's screen size
 - See the social media share links when they click the share icon
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FrontEndMentor](https://your-solution-url.com)
+- Live Site URL: [GitHub](https://kleinlikecalvin.github.io/articlePreviewComponent/)
 
 ## My process
 
+- Create HTML file (ex: index.html)
+- Create an external CSS file (ex: styles.css)
+- Create an external JS file (ex: script.js)
+- In the head: link the font used (Manrope) from Google Fonts and link the external CSS file.
+- Create the component skeleton (HTML)
+- Before the closing <code>body</code> tag: link Tippy.js and the external JS file
+- Style each element to match the design (CSS)
+- If the window is over a certain size, use the Tippy otherwise style the footer to match the design (JS)
+- Nailed it!
+
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML
+- CSS
+- Flex
+- Desktop to mobile workflow
+- [Tippy.js](https://atomiks.github.io/tippyjs/) - Tippy component
+- [Google Fonts](https://fonts.google.com/) - Fonts
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+At the time of building this component, I'm also working through Kent C. Dodds EpicReact course. I think that what I'm learning from Kent mixed with my previous knowledge of Bootstrap inspired me to consider how many times I've been repeating <code>display: flex</code> and <code>flex-direction: column</code>. So, in this challenge I decided to save those properties into CSS class rules that I can add to any element as I write. I know that <code>flex</code> defaults to row so I didn't feel it was necessary to create a <code>.flex</code>, <code>.row</code>, AND <code>.col</code> rule.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
 }
 ```
+
+I had a hell of a time figuring out how to style the svg arrow I used in the footer button. Eventually, I think I landed on some sort of hacky solution so I'd appreciate any feedback.
+
+```css
+footer #shareBtn svg {
+  background-color: var(--lightGreyishBlue);
+  border-radius: 50%;
+  fill: var(--desaturatedBlue);
+  padding: 11px 10px;
+  transition: 0.3s;
+}
+```
+
+The bulk of what I learned from completing this challenge came from my JS. Up until this point I've never manipulated/utilized the window, never used Tippy.js, and never used <code>.classList</code>. So, it was SUPER rad that I got to learn about all three of these powerful tools. I used <code>window.innerWidth</code> to set the function of <code>#shareBtn</code> depending on the size of the window. Then I customized the Tippy constructor to my needs for the challenge. Lastly, I used <code>.classList</code> to add and remove the <code>.shareMode</code> CSS rule I created. This was a pretty awesome challenge.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+if (window.innerWidth >= 838) {
+  tippyShareContent.style.display = "flex";
+  tippy(button, {
+    trigger: "click",
+    theme: "custom",
+    allowHTML: true,
+    interactive: true,
+    content: tippyShareContent,
+  }); //end tippy()
+} else {
+  button.addEventListener("click", () => {
+    if (footer.classList.length == 1) {
+      footer.classList.add = "shareMode";
+    } else {
+      footer.classList.remove = "shareMode";
+    }
+  });
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I read/hear a lot about mobile-first development but every time I try I always end up with a mess that needs a ton of revamping to make the desktop view appear correctly. Though, I have a pretty easy time writing desktop to mobile, I would like to continue practicing mobile to desktop.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Tippy.js](https://atomiks.github.io/tippyjs/) - Tippy made it so easy to CDN the package and customize the Tippy constructor to my needs.
+- [Window.innerWidth](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth) - I haven't utilized the window very much up until this point in my coding. So, it was fun to learn about innerWidth which I used to distinguish which event should occur with the footer.
+- [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) - Using <code>.classList</code> is awesome! It reminds me a bit of jQuery.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Nikki Klein](https://www.kleinlikecalvin.com)
+- Frontend Mentor - [@kleinLikeCalvin](https://www.frontendmentor.io/profile/kleinlikecalvin)
+- Twitter - [@kleinLikeCalvin](https://www.twitter.com/kleinlikecalvin)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I want to thank the people behind Tippy.js/Popper, the docs were clear and utilizing their code made this challenge way less intricate. I would also like to thank my mentor, Nathaniel Walston, for helping me realize that it's pretty pointless to focus on the transition between desktop and mobile view. Because pretty much nobody ever will go from using one to the other on the same device.

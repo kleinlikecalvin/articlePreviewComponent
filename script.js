@@ -14,9 +14,9 @@ if (window.innerWidth >= 838) {
 } else {
   button.addEventListener("click", () => {
     if (footer.classList.length == 1) {
-      footer.classList = "flex shareMode";
+      footer.classList.add = "shareMode";
     } else {
-      footer.classList = "flex";
+      footer.classList.remove = "shareMode";
     }
   });
 }
