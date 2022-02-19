@@ -38,6 +38,7 @@ body {
   color: var(--darkGreyishBlue);
 }
 .articleCont h2 {
+  font-size: 22px;
   margin: 0;
   padding: 30px 45px 15px 45px;
 }
@@ -55,65 +56,71 @@ footer {
   justify-content: space-between;
   padding: 0 45px 0 45px;
 }
-footer .authorImg img {
+.authorImg img {
   width: 45px;
   border-radius: 50%;
 }
-footer .authorInfo {
+.authorInfo {
   justify-content: space-evenly;
 }
-footer #authorName {
+#authorName {
   font-weight: 700;
   margin: 0 0 0 20px;
   padding: 0;
 }
-footer #articleDate {
+#articleDate {
   margin: 0;
   margin: 0 0 0 20px;
   padding: 0;
 }
-footer .tippy-box[data-theme~="custom"] {
+.tippy-box[data-theme~="custom"] {
   background-color: var(--darkGreyishBlue);
   border-radius: 10px;
   top: -25px;
 }
-footer .tippy-box[data-theme~="custom"] > .tippy-arrow::before {
+.tippy-box[data-theme~="custom"] > .tippy-arrow::before {
   transform: scale(1.5);
 }
-footer
-  .tippy-box[data-theme~="custom"][data-placement^="top"]
-  > .tippy-arrow::before {
+.tippy-box[data-theme~="custom"][data-placement^="top"] > .tippy-arrow::before {
   border-top-color: var(--darkGreyishBlue);
 }
-footer
-  .tippy-box[data-theme~="custom"][data-placement^="bottom"]
+.tippy-box[data-theme~="custom"][data-placement^="bottom"]
   > .tippy-arrow::before {
   border-bottom-color: var(--darkGreyishBlue);
 }
-footer
-  .tippy-box[data-theme~="custom"][data-placement^="left"]
+.tippy-box[data-theme~="custom"][data-placement^="left"]
   > .tippy-arrow::before {
   border-left-color: var(--darkGreyishBlue);
 }
-footer
-  .tippy-box[data-theme~="custom"][data-placement^="right"]
+.tippy-box[data-theme~="custom"][data-placement^="right"]
   > .tippy-arrow::before {
   border-right-color: var(--darkGreyishBlue);
 }
-footer #tippyShareContent {
+#tippyShareContent {
   display: none;
   background-color: var(--darkGreyishBlue);
   justify-content: space-evenly;
   align-items: center;
   width: 200px;
 }
-footer #tippyShareContent h3 {
+#tippyShareContent h3 {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--greyishBlue);
   letter-spacing: 3px;
+}
+
+#shareBtn {
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+  height: 37px;
+  border: none;
+}
+#shareBtn:hover {
+  cursor: pointer;
 }
 footer #shareBtn svg {
   background-color: var(--lightGreyishBlue);
