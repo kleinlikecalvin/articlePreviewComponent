@@ -13,10 +13,6 @@ if (window.innerWidth >= 838) {
   }); //end tippy()
 } else {
   button.addEventListener("click", () => {
-    if (footer.classList.length == 1) {
-      footer.classList.add = "shareMode";
-    } else {
-      footer.classList.remove = "shareMode";
-    }
+    footer.classList.toggle("shareMode");
   });
 }

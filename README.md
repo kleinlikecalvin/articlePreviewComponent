@@ -1,5 +1,6 @@
 ## Table of contents
 
+- [What I Learned](#what-i-learned)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Links](#links)
@@ -11,18 +12,25 @@
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
+## What I learned
+
+- How to make my own utility classes and learned the value of them.
+- How to use .classList
+- Learned about window.innerWidth
+- Learned to use Tippy with a custom configuration
+
 ## Overview
 
 This is a beginner challenge by FrontEndMentor.io [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
 
-I used HTML, CSS, JS, and Tippy.js to complete it. There are a few tools I can now equip which I learned from completing this challenge. I detailed them below!
+I used HTML, CSS, JS, and Tippy.js to complete it. There are a few new tools I learned, I detailed them below!
 
 ### The challenge
 
 Users should be able to:
 
-- View the optimal layout for the component depending on their device's screen size
-- See the social media share links when they click the share icon
+- Responsive Design
+- Toggle share icons
 
 ### Links
 
@@ -89,11 +97,7 @@ if (window.innerWidth >= 838) {
   }); //end tippy()
 } else {
   button.addEventListener("click", () => {
-    if (footer.classList.length == 1) {
-      footer.classList.add = "shareMode";
-    } else {
-      footer.classList.remove = "shareMode";
-    }
+    footer.classList.toggle("shareMode");
   });
 }
 ```
