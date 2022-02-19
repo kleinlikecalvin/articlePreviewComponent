@@ -134,8 +134,8 @@ footer #shareBtn svg:hover {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media only screen and (max-width: 837px) {
-  .main {
+@media screen and (max-width: 837px) {
+  .cont {
     width: 375px;
     height: unset;
     flex-direction: column;
